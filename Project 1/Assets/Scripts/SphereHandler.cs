@@ -44,22 +44,16 @@ public class SphereHandler : MonoBehaviour
 
         if (!pS.isPlaying && proximity01 > playIfProximityOver)
         {
-            Debug.Log("PLAY!");
+            //Debug.Log("PLAY!");
             pS.gameObject.SetActive(true);
             pS.Play();
         }
         else if (pS.isPlaying && proximity01 <= stopIfProximityUnder) // if (proximity01 > stopIfProximityOver)
         {
-            Debug.Log("STOP!");
+            //Debug.Log("STOP!");
             pS.Stop();
             pS.gameObject.SetActive(false);
         }
 
-        // TODO FOR HOME!
-        // SFX Change Pitch as you approach
-        // 0. Make sure sphere has an audio source & audio clip! (download one if needed) 
-        // 1. Get a reference to the audio source
-        // 2. Map the proximity to the audio source's pitch
-        // (expose any variables you need in the prefab to get the result you want)
     }
 }

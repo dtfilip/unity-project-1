@@ -8,7 +8,7 @@ public class PhysicsHandler : MonoBehaviour
     void jump(Vector3 normalized)
     {
         Rigidbody rb = GetComponent<Rigidbody>();
-        rb.AddForce(normalized * velocity, ForceMode.VelocityChange);
+        rb.AddForce((normalized + Vector3.up) * velocity, ForceMode.VelocityChange);
     }
 
     private void OnTriggerEnter(Collider other)
